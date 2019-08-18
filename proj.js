@@ -125,9 +125,9 @@ let insertValue = i => {
   };
 }
 
-let buttons = document.getElementsByTagName('button');
+let buttons = document.getElementsByClassName('Calc-buttons');
 let clear = document.getElementById('remove');
-let result = document.getElementById('result');
+let result = document.getElementById('resultCalc');
 
 for (let i = 0; i < buttons.length; i++) {
   if (buttons[i].innerHTML === '=') {
