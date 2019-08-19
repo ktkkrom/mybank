@@ -1,5 +1,3 @@
-
-
 document.getElementById('findNum').onclick = () => {
   let number = document.getElementById('number').value;
   document.getElementById('content').innerHTML = '';
@@ -24,60 +22,56 @@ document.getElementById('findCurrency').onclick = () => {
     axios.get(`https://api.exchangeratesapi.io/latest?base=EUR`)
       .then(response => {
         let resultsDiv = document.getElementById('results');
-        let emptyUl = document.createElement('ul');
-        resultsDiv.appendChild(emptyUl);
-        response.data
 
-        let currencyLi = new contentCreator(
+        let currencyLi = new ContentCreator(
           response.data.rates.SEK,
           response.data.rates.GBP,
           response.data.rates.BGN
         );
+
         let resultUl = resultsDiv.appendChild(currencyLi.createFinalUl());
-        resultsDiv.replaceChild(resultUl, emptyUl);
+        console.log(document.getElementById('firstUl'))
+        resultsDiv.replaceChild(resultUl, document.getElementById('firstUl'));
+
       })
   } else if (option2.selected === true) {
     axios.get(`https://api.exchangeratesapi.io/latest?base=CAD`)
       .then(response => {
         let resultsDiv = document.getElementById('results');
-        let emptyUl = document.createElement('ul');
-        resultsDiv.appendChild(emptyUl);
-        response.data
 
-        let currencyLi = new contentCreator(
+        let currencyLi = new ContentCreator(
           response.data.rates.SEK,
           response.data.rates.GBP,
           response.data.rates.BGN
         );
         let resultUl = resultsDiv.appendChild(currencyLi.createFinalUl());
-        resultsDiv.replaceChild(resultUl, emptyUl);
+        resultsDiv.replaceChild(resultUl, document.getElementById('firstUl'));
       })
   } else if (option3.selected === true) {
     axios.get(`https://api.exchangeratesapi.io/latest?base=CZK`)
       .then(response => {
         let resultsDiv = document.getElementById('results');
-        let emptyUl = document.createElement('ul');
-        resultsDiv.appendChild(emptyUl);
         response.data
 
-        let currencyLi = new contentCreator(
+        let currencyLi = new ContentCreator(
           response.data.rates.SEK,
           response.data.rates.GBP,
           response.data.rates.BGN);
         let resultUl = resultsDiv.appendChild(currencyLi.createFinalUl());
-        resultsDiv.replaceChild(resultUl, emptyUl);
+        resultsDiv.replaceChild(resultUl, document.getElementById('firstUl'));
       })
   }
 }
 
-class contentCreator {
+class ContentCreator {
   constructor(sek, gbp, bgn) {
     this.sek = sek;
     this.gbp = gbp;
     this.bgn = bgn;
   }
   createFinalUl() {
-    let resultUl = document.createElement('result');
+    let resultUl = document.createElement('ul');
+    resultUl.id = 'firstUl';
     resultUl.appendChild(this.createSek());
     resultUl.appendChild(this.createGbp());
     resultUl.appendChild(this.createBgn());

@@ -26,7 +26,7 @@ document.getElementById('findCurrency').onclick = () => {
         let resultsDiv = document.getElementById('results');
         response.data
 
-        let currencyLi = new contentCreator(
+        let currencyLi = new ContentCreator(
           response.data.rates.SEK,
           response.data.rates.GBP,
           response.data.rates.BGN
@@ -39,7 +39,7 @@ document.getElementById('findCurrency').onclick = () => {
         let resultsDiv = document.getElementById('results');
         response.data
 
-        let currencyLi = new contentCreator(
+        let currencyLi = new ContentCreator(
           response.data.rates.SEK,
           response.data.rates.GBP,
           response.data.rates.BGN
@@ -53,7 +53,7 @@ document.getElementById('findCurrency').onclick = () => {
         let resultsDiv = document.getElementById('results');
         response.data
 
-        let currencyLi = new contentCreator(
+        let currencyLi = new ContentCreator(
           response.data.rates.SEK,
           response.data.rates.GBP,
           response.data.rates.BGN);
@@ -63,14 +63,14 @@ document.getElementById('findCurrency').onclick = () => {
 }
 
 // content constructor
-class contentCreator {
+class ContentCreator {
   constructor(sek, gbp, bgn) {
     this.sek = sek;
     this.gbp = gbp;
     this.bgn = bgn;
   }
   createFinalUl() {
-    let resultUl = document.createElement('result');
+    let resultUl = document.createElement('ul');
     resultUl.appendChild(this.createSek());
     resultUl.appendChild(this.createGbp());
     resultUl.appendChild(this.createBgn());
