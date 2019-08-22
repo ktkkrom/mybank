@@ -1,0 +1,10 @@
+
+logs/
+ 
+*.dat
+
+*.html
+
+!index.html
+
+foo.txt

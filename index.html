@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/index.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.png" type="articles-container__img/png">
+  <link href="https://fonts.googleapis.com/css?family=Aleo:400,700&display=swap" rel="stylesheet">
+  <title>MyBank</title>
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class="header-navigation">
+    <div class="header-navigation__division">
+      <img class="header-division__first-item" src="img/favicon.png" alt="MyBank Logo"></p>
+      <div class="header-division__right">
+        <a href="#about">ABOUT US</a>
+        <a href="#articles"> READ ARTICLES</a>
+        <a href="#converter">CONVERT</a>
+        <a href="#calculator">CALCULATE</a>
+        <a href="#random">STUDY NUMBERS</a>
+        <a href="#contact">CONTACT US</a>
+      </div>
+    </div>
+  </nav>
+  <!-- header -->
+  <header class="header">
+    <div class="header-div header-div--main">
+      <img class="header-logo" src="img/fig.png" alt="MyBank logo">
+      <h1 class="header-title">MyBank <br> smart choice <br> for your investments
+      </h1>
+      <p>
+        MyBank helps you to understand complex financial concepts, improve your investing skills,
+        and learn how to manage your money.
+      </p>
+      <a href="#about" class="header-scroll"></a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <main>
+    <article>
+      <section id="about" class="about">
+        <div class="header-div">
+          <div class="about-div">
+            <h2 class="about-div__title">About Us</h2>
+            <p>
+              Now, more than ever,
+              the need for financial literacy and education are of critical importance.
+              We believe that empowering people with accurate and unbiased financial education
+              can make a difference. Whether studying for an exam in business school, buying a home,
+              investing as a beginner or expert, choosing a financial product, or planning for retirement,
+              our readers have questions that require insightful and responsible answers. We’re here to
+              provide those answers in a way that’s approachable and will leave them feeling confident
+              and in control of their financial future.
+            </p>
+            <p>
+              Whether you’re in a classroom, a boardroom or your living room, our editors and network
+              of financial advisors and experts have answered your questions and proudly earned your
+              trust since 1999. Investopedia is a Dotdash brand and part of the IAC family of websites.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <img class='line' src="img/line.png" alt="">
+
+      <!-- articles -->
+      <section id='articles' class="articles">
+        <div class="articles-container">
+          <a href="#"><img src="img/1.jpg" alt="Metropolis" class="articles-container__img"></a>
+          <div class="articles-container__div">
+            <div class="articles-div__text">GLOBAL 2000 <br>
+              The World's Largest Public Companies</div>
+          </div>
+        </div>
+        <div class="articles-container">
+          <a href="#"> <img src="img/2.jpg" alt="USA vs China" class="articles-container__img"></a>
+          <div class="articles-container__div">
+            <div class="articles-div__text">Why The U.S. Will Win <br> The China Trade War</div>
+          </div>
+        </div>
+        <div class="articles-container">
+          <a href="#"><img src="img/3.jpg" alt="USA vs China" class="articles-container__img"></a>
+          <div class="articles-container__div">
+            <div class="articles-div__text">The Best ETFs For Investors In 2019</div>
+          </div>
+        </div>
+        <div class="articles-container">
+          <a href="#"><img src="img/4.jpg" alt="USA vs China" class="articles-container__img"></a>
+
+          <div class="articles-container__div">
+            <div class="articles-div__text">5 Things Wealthy People Invest Their Money Into</div>
+          </div>
+        </div>
+        <div class="articles-container">
+          <a href="#"> <img src="img/5.jpg" alt="USA vs China" class="articles-container__img"></a>
+
+          <div class="articles-container__div">
+            <div class="articles-div__text">A Recession Won't Wreck Your Retirement...But This Will</div>
+          </div>
+        </div>
+        <div class="articles-container">
+          <a href="#"> <img src="img/6.jpeg" alt="USA vs China" class="articles-container__img"></a>
+
+          <div class="articles-container__div">
+            <div class="articles-div__text">Microloan Startup Tala Raises $110 Million In New Funding</div>
+          </div>
+        </div>
+      </section>
+      <img class='line' src="img/line.png" alt="">
+
+      <!-- converter -->
+      <section id='converter' class="converter converter--expand">
+        <div class="header-div">
+          <div class="about-div about-div--light">
+            <h2 class="about-div__title">CONVERT
+            </h2>
+            <h3>Quote against a different currency by setting the base parameter in your request (base currency is USD).</h3>
+            <select id='select'>
+              <option id='option1'>eur</option>
+              <option id='option2'>cad</option>
+              <option id='option3'>czk</option>
+              <option id='option4'>thb</option>
+            </select> <button id='findCurrency'>enter</button>
+            <div id="results">
+              <div id='firstUl'>
+                <ul class='converter-ul'>
+                  <li>info</li>
+                  <li></li>
+                  <li></li>
+                  <br>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <img class='line' src="img/line.png" alt="">
+      <!-- calculator -->
+      <section id="calculator" class="calculator-about">
+        <div class="calculator-title">
+          <h2 class="calculator-title__header"> Calculate</h1>
+        </div>
+        <div class="calculator">
+          <input id="screen" disabled>
+          <div class="calculator-buttons">
+            <input value="7" onclick="addToScreen('7')">
+            <input value="8" onclick="addToScreen('8')">
+            <input value="9" onclick="addToScreen('9')">
+            <input value="/" onclick="addToScreen('/')">
+            <input value="4" onclick="addToScreen('4')">
+            <input value="5" onclick="addToScreen('5')">
+            <input value="6" onclick="addToScreen('6')">
+            <input value="*" onclick="addToScreen('*')">
+            <input value="1" onclick="addToScreen('1')">
+            <input value="2" onclick="addToScreen('2')">
+            <input value="3" onclick="addToScreen('3')">
+            <input value="-" onclick="addToScreen('-')">
+            <input value="." onclick="addToScreen('.')">
+            <input value="0" onclick="addToScreen('0')">
+            <input id="clear" class="key reset" value="c" onclick="addToScreen('c')">
+            <input value="+" onclick="addToScreen('+')">
+            <input id="results" value="=" onclick='result()'>
+          </div>
+        </div>
+      </section>
+      <img class='line' src="img/line.png" alt="">
+    </article>
+
+    <!-- random -->
+    <article>
+      <section id="random" class="about">
+        <div class="header-div">
+          <div class="about-div">
+            <h2 class="about-div__title">Study numbers</h2>
+            <section>
+              <p>Bring meaning to your metrics and stories to your dates with our MyNumbers feature - random of interesting number facts.</p>
+                <input id='number' type="text" placeholder="type number">
+                <button id='findNum'>enter</button>
+                <ul id='history'>
+
+                </ul>
+                <button type="button" id='clearHistory'name="button">clear history</button>
+                <div id='content'>
+                  <p id="contentP"></p>
+
+                </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </article>
+
+  </main>
+  <!-- footer -->
+  <footer id="contact" class="footer">
+    <img class='footer__img' src="img/faviconlast.png" alt="">
+    <p class="footer__text">smart choice for your investments</p>
+    <div class="footer__division">
+      <button type="button" class="footer__division-button"><a href="#"><img src="img/1.png" alt=""></a>
+      </button>
+      <button type="button" class="footer__division-button"> <a href="#"><img src="img/2.png" alt=""></a> </button>
+      <button type="button" class="footer__division-button">
+        <a href="#"><img src="img/3.png" alt=""></a>
+      </button>
+      <button type="button" class="footer__division-button"><a href="#"> <img src="img/4.png" alt=""></a>
+      </button>
+      <button type="button" class="footer__division-button"><a href="#"> <img src="img/5.png" alt=""></a>
+      </button>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" charset="utf-8"></script>
+  <script src="js/main.js">
+  </script>
+</body>
+
+</html>
